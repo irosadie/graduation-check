@@ -13,9 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://smpn1rangsangbarat.web.id"),
   title: "SMPN 1 Rangsang Barat - Pengumuman Kelulusan",
-  description: "Cek hasil kelulusan siswa SMPN 1 Rangsang Barat",
+  description: "Cek hasil kelulusan siswa secara online. Masukkan NISN untuk mengetahui hasil kelulusan Anda.",
   icons: [{ rel: "icon", url: "/logo.png" }],
+  openGraph: {
+    title: "SMPN 1 Rangsang Barat - Pengumuman Kelulusan",
+    description: "Cek hasil kelulusan siswa secara online. Masukkan NISN untuk mengetahui hasil kelulusan Anda.",
+    url: "https://smpn1rangsangbarat.web.id",
+    siteName: "SMPN 1 Rangsang Barat",
+    images: [{ url: "/logo.png", width: 512, height: 512, alt: "Logo SMPN 1 Rangsang Barat" }],
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SMPN 1 Rangsang Barat - Pengumuman Kelulusan",
+    description: "Cek hasil kelulusan siswa secara online. Masukkan NISN untuk mengetahui hasil kelulusan Anda.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({
