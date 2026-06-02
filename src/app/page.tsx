@@ -131,6 +131,8 @@ export default function Home() {
   }
 
   useEffect(() => {
+    navigator.sendBeacon("/api/traffic", "{}");
+
     const params = new URLSearchParams(window.location.search);
     const mode = params.get("mode");
     const pass = params.get("pass");
