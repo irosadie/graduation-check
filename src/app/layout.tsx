@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://smpn1rangsangbarat.web.id"),
+  metadataBase: new URL("https://www.smpn1rangsangbarat.web.id"),
   title: "SMPN 1 Rangsang Barat - Pengumuman Kelulusan",
   description: "Cek hasil kelulusan siswa secara online. Masukkan NISN untuk mengetahui hasil kelulusan Anda.",
   icons: [{ rel: "icon", url: "/logo.png" }],
