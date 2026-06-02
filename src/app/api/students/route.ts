@@ -5,7 +5,9 @@ function parseDate(str: string): Date {
   const [datePart, timePart] = str.split(" ");
   const [day, month, year] = datePart.split("/").map(Number);
   const [hour, minute, second] = timePart.split(":").map(Number);
-  return new Date(year, month - 1, day, hour, minute, second);
+  const wib = Date.UTC(year, month - 1, day, hour, minute, second);
+  const utc = wib - 7 * 60 * 60 * 1000;
+  return new Date(utc);
 }
 
 export async function GET(request: Request) {

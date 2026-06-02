@@ -26,7 +26,7 @@ Isi variabel berikut di Vercel Dashboard (**Settings → Environment Variables**
 |---|---|
 | `DATABASE_URL` | `postgresql://user:pass@host:6543/postgres?pgbouncer=true&connection_limit=1&pool_timeout=10` |
 | `DIRECT_URL` | `postgresql://user:pass@host:5432/postgres` |
-| `OPEN_AT` | `02/06/2026 19:00:01` (format: `DD/MM/YYYY HH:mm:ss`) |
+| `OPEN_AT` | `02/06/2026 19:00:01` (format: `DD/MM/YYYY HH:mm:ss` — **WIB / UTC+7**) |
 | `MODE` | `dev` |
 | `PASS` | `5ayaganteng` |
 
