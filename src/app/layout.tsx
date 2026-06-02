@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "Cek hasil kelulusan siswa secara online. Masukkan NISN untuk mengetahui hasil kelulusan Anda.",
     url: "https://smpn1rangsangbarat.web.id",
     siteName: "SMPN 1 Rangsang Barat",
-    images: [{ url: "/logo.png", width: 512, height: 512, alt: "Logo SMPN 1 Rangsang Barat" }],
+    images: [{ url: "/lulus.png", width: 1200, height: 630, alt: "Pengumuman Kelulusan SMPN 1 Rangsang Barat" }],
     locale: "id_ID",
     type: "website",
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SMPN 1 Rangsang Barat - Pengumuman Kelulusan",
     description: "Cek hasil kelulusan siswa secara online. Masukkan NISN untuk mengetahui hasil kelulusan Anda.",
-    images: ["/logo.png"],
+    images: ["/lulus.png"],
   },
 };
 
