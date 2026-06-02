@@ -114,7 +114,14 @@ export default function Home() {
         method: "POST",
         keepalive: true,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nisn: query.trim(), action: data.result ? "found" : "not_found" }),
+        body: JSON.stringify({
+          action: "search",
+          nisn: query.trim(),
+          found: !!data.result,
+          response: data.result
+            ? { nisn: data.result.nisn, fullname: data.result.fullname, status: data.result.status }
+            : null,
+        }),
       }).catch(() => {});
 
       if (data.result) {

@@ -10,18 +10,12 @@ export async function POST(request: Request) {
     let body: Record<string, unknown> = {};
     try { body = await request.json(); } catch {}
 
-    const nisn = typeof body.nisn === "string" ? body.nisn : null;
-    const action = typeof body.action === "string" ? body.action : null;
+    const userInfo: Record<string, unknown> = { userAgent, page, ...body };
 
     await prisma.traffic.create({
       data: {
         ip,
-        userInfo: JSON.stringify({
-          userAgent,
-          page,
-          nisn,
-          action,
-        }),
+        userInfo: JSON.stringify(userInfo),
       },
     });
 
