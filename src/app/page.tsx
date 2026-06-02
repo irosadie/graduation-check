@@ -109,6 +109,14 @@ export default function Home() {
       setResult(data.result);
       setLoading(false);
       setSearched(true);
+
+      fetch("/api/traffic", {
+        method: "POST",
+        keepalive: true,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nisn: query.trim(), action: data.result ? "found" : "not_found" }),
+      }).catch(() => {});
+
       if (data.result) {
         await new Promise((r) => setTimeout(r, 5000));
         setReveal(true);
