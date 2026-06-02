@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SMPN 1 Rangsang Barat - Pengumuman Kelulusan",
   description: "Cek hasil kelulusan siswa SMPN 1 Rangsang Barat",
+  icons: [{ rel: "icon", url: "/logo.png" }],
 };
 
 export default function RootLayout({
