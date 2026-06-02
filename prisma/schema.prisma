@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  directUrl  = env("DIRECT_URL")
+}
+
+model Student {
+  id          String   @id @default(uuid()) @db.Uuid
+  nisn        String   @unique
+  fullname    String
+  status      Status
+  description String?
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("students")
+}
+
+model Traffic {
+  id        String   @id @default(uuid()) @db.Uuid
+  time      DateTime @default(now())
+  ip        String
+  userInfo  String?  @map("user_info")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("trafics")
+}
+
+enum Status {
+  PASSED
+  UNPASSED
+}
